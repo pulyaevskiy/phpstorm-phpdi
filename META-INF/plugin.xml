@@ -1,0 +1,45 @@
+<idea-plugin version="2">
+  <id>com.pulyaevskiy.phpstorm.phpdi</id>
+  <name>PHP-DI plugin</name>
+  <version>1.0</version>
+  <vendor url="https://github.com/pulyaevskiy/phpstorm-phpdi">Anatoly Pulyaevskiy</vendor>
+
+  <description><![CDATA[
+      PHP-DI plugin for PhpStorm<br><br>
+      This is very simple plugin which only implements type provider for services returned from PHP-DI container.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      v1.0 - Initial release
+    ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <depends>com.jetbrains.php</depends>
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+      <php.typeProvider2 implementation="com.pulyaevskiy.phpstorm.phpdi.PhpDiTypeProvider"/>
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
