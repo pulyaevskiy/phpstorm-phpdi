@@ -19,4 +19,4 @@ Result:
 
 ![Example screenshot](example.png?raw=true "Example screenshot")
 
-Licence: MIT
+License: MIT
