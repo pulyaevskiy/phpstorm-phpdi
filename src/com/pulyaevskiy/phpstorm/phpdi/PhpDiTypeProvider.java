@@ -30,7 +30,6 @@ public class PhpDiTypeProvider implements PhpTypeProvider2 {
     @Nullable
     @Override
     public String getType(PsiElement psiElement) {
-
         if (DumbService.getInstance(psiElement.getProject()).isDumb()) {
             return null;
         }
@@ -69,8 +68,17 @@ public class PhpDiTypeProvider implements PhpTypeProvider2 {
         }
 
         // Get FQN from parameter string.
-        // Example: #K#C\Foo\Bar::get()%#K#C\Bar\Baz. -> \Bar\Baz
-        String parameter = s.substring(endIndex + 5, s.length() - 1);
+        // Example (PhpStorm 8): #K#C\Foo\Bar::get()%#K#C\Bar\Baz. -> \Bar\Baz.
+        // Example (PhpStorm 9): #K#C\Foo\Bar::get()%#K#C\Bar\Baz.class -> \Bar\Baz.class
+        String parameter = s.substring(endIndex + 5, s.length());
+
+        if (parameter.contains(".class")) { // for PhpStorm 9
+            parameter = parameter.replace(".class", "");
+        }
+
+        if (parameter.contains(".")) {
+            parameter = parameter.replace(".", "");
+        }
 
         return PhpIndex.getInstance(project).getAnyByFQN(parameter);
     }
