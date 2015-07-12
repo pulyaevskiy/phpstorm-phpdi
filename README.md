@@ -1,4 +1,9 @@
 # PHP-DI plugin for PhpStorm
+[![Version](http://phpstorm.espend.de/badge/7694/version)](https://plugins.jetbrains.com/plugin/7694)
+[![Downloads](http://phpstorm.espend.de/badge/7694/downloads)](https://plugins.jetbrains.com/plugin/7694)
+[![Downloads last month](http://phpstorm.espend.de/badge/7694/last-month)](https://plugins.jetbrains.com/plugin/7694)
+
+Plugin url : https://plugins.jetbrains.com/plugin/7694
 
 This is very simple plugin which only implements type provider for services returned from PHP-DI container.
 
