@@ -16,12 +16,16 @@ $postRepository = $container->get(PostRepository::class);
 
 So the only thing this plugin does is:
 
-1. It looks for all "get" method calls.
+1. It looks for all `get` (or `make`, since `v1.2.0`) method calls.
 2. It filters out all except those where first argument contains `::class` substring.
 3. It extracts class FQN from the first argument and provides it as a return type for that specific method call.
 
 Result:
 
 ![Example screenshot](example.png?raw=true "Example screenshot")
+
+#### Contributors:
+
+* [Logan Attwood](https://github.com/lattwood)
 
 License: MIT
