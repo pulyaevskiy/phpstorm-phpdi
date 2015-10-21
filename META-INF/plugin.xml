@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>com.pulyaevskiy.phpstorm.phpdi</id>
   <name>PHP-DI plugin</name>
-  <version>1.1</version>
+  <version>1.2</version>
   <vendor url="https://github.com/pulyaevskiy/phpstorm-phpdi">Anatoly Pulyaevskiy</vendor>
 
   <description><![CDATA[
@@ -10,6 +10,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      v1.2 - Added support for make() method (Logan Attwood)<br>
       v1.1 - Updated for PhpStorm 9<br>
       v1.0 - Initial release
     ]]>
