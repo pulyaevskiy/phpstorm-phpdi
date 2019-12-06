@@ -5,11 +5,11 @@
 
 Plugin url : https://plugins.jetbrains.com/plugin/7694
 
-Suggestion for users who seeking solution for this plugin working on new PhpStorm.
+**Suggestion for users who seeking solution for this plugin working on latest PhpStorm.**
 
-As PhpStorm now support this feature in a native way, the plugin is not needed any more. Indeed the plugin won't work on PhpStorm 2019.3 and newer. The solution is from [http://php-di.org/doc/ide-integration.html#phpstorm-integration](http://php-di.org/doc/ide-integration.html#phpstorm-integration).
+As PhpStorm now support this feature in a native way, the plugin is not needed any more. Indeed the plugin won't work on PhpStorm 2019.3 and later. The solution is from [http://php-di.org/doc/ide-integration.html#phpstorm-integration](http://php-di.org/doc/ide-integration.html#phpstorm-integration).
 
-Take my case for example, my container is `Comm_Factory::get()` and `Comm_Factory::make()`, so the meta file should look like this
+Take my case for example, my container is `Comm_Factory` and there are two static functions `get()` and `make()` in it, so the meta file should look like this
 
 ```php
 // .phpstorm.meta.php
@@ -36,7 +36,7 @@ namespace PHPSTORM_META {
 }
 ```
 
-Below is the original readme.
+**Below is the original readme.**
 
 
 
